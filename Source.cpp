@@ -14,9 +14,11 @@ using namespace cv;
 
 int main()
 {
+	string file_number = "221";
+	string name = "1489";
 	//Get list of all files in folder
 	vector<string> liste_img;
-	std::string path = "C:/Users/lilia/Desktop/Parcels/220_quantized/1185.0";//IF CHANGING FOLDER NEED TO MODIFY EXCEL FILE NAME BELOW
+	std::string path = "C:/Users/lilia/Desktop/Parcels/"+file_number+"_quantized/"+name+".0";//IF CHANGING FOLDER NEED TO MODIFY EXCEL FILE NAME BELOW
 	for (const auto& entry : fs::directory_iterator(path)) { liste_img.push_back(entry.path().string()); }// liste_img.push_back(entry.path());
 
 
@@ -106,7 +108,7 @@ int main()
 
 	//Writting on csv file + Printing infos 
 	ofstream MyExcelFile; // ";" -> new cell // endl -> new row
-	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/Parcels_220_quantized_1185.0.csv");//MODIFY HERE
+	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/Parcels_"+file_number+"_quantized_"+name+".0.csv");//MODIFY HERE
 	MyExcelFile << "Counter;Images" << endl;
 	cout << "\nDone2.\n";
 	for (int j = 0; j < counter_pattern_imgs.size(); j++) {

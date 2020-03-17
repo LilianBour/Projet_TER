@@ -1,5 +1,6 @@
 #include "Pattern.h"
 
+
 void Pattern::load_imgs() {
 	string path = "C:/Users/lilia/Desktop/Parcels/" + folder_nb + "_quantized/" + name + ".0";
 	for (const auto& entry : fs::directory_iterator(path)) { liste_img.push_back(entry.path().string()); }
@@ -83,11 +84,12 @@ void Pattern::cube() {
 }
 
 void Pattern::writing_and_deleting_solid_patterns() {
+	int rank = 1;
 	vector<pair<pair<int, vector<int>>, vector<vector<int>>>> cou_pat_imgs_bis;
 	//Writting on csv file + Printing infos 
 	ofstream MyExcelFile; // ";" -> new cell // endl -> new row
 	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/Parcels_" + folder_nb + "_quantized_" + name + ".0.csv");//MODIFY HERE
-	MyExcelFile << "Counter;Images" << endl;
+	MyExcelFile << "LogR;LogC;Rank;Counter;Images" << endl;
 	cout << "\nDone2.\n";
 	for (int j = 0; j < counter_pattern_imgs.size(); j++) {
 		bool to_skip = false;
@@ -128,7 +130,16 @@ void Pattern::writing_and_deleting_solid_patterns() {
 			if (to_skip == false) {
 				cou_pat_imgs_bis.push_back(counter_pattern_imgs[j]);
 				cout << "Pattern " << j << " appearing " << counter_pattern_imgs[j].first.first << " times" << endl;
+				////Remplacement des . dans les floats par des , pour que ce soit adapté au format excel
+				string LogR = to_string(log10(rank));
+				replace(LogR.begin(), LogR.end(), '.', ',');
+				MyExcelFile << LogR << ";";
+				string LogC = to_string(log10(counter_pattern_imgs[j].first.first));
+				replace(LogC.begin(), LogC.end(), '.', ',');
+				MyExcelFile << LogC << ";";
+				MyExcelFile << rank << ";";
 				MyExcelFile << counter_pattern_imgs[j].first.first << ";";
+				rank = rank + 1;
 				for (int i = 0; i < counter_pattern_imgs[j].second.size(); i++) {
 					for (int k = 0; k < counter_pattern_imgs[j].second[i].size(); k++) {
 						MyExcelFile << counter_pattern_imgs[j].second[i][k] << ",";

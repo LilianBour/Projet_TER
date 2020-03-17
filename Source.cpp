@@ -38,11 +38,14 @@ Pattern welcome_fun() {
 
 int main()
 {
-	Pattern pt = welcome_fun();
-	pt.load_imgs();
-	pt.cube();
-	pt.sorting();
-	pt.writing_and_deleting_solid_patterns();
+	while (true) {
+		Pattern pt = welcome_fun();
+		pt.load_imgs();
+		pt.cube();
+		pt.sorting();
+		pt.writing_and_deleting_solid_patterns();
+	}
+	
 	
 	return 0;
 }

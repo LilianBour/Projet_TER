@@ -3,6 +3,7 @@
 #include "opencv2/highgui/highgui.hpp"  
 #include <opencv2/imgcodecs.hpp>
 #include <iostream>
+#include <math.h>
 #include <filesystem>
 #include <fstream>
 #include <algorithm> 

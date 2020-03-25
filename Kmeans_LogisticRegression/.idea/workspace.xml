@@ -2,67 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f0cb78-a6d2-40a1-9560-a1639d7bf90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Doc1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1176.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1185.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1188.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1189.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1193.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1197.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1198.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1201.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1203.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1204.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1320.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../220_quantized/Parcels_220_quantized_1340.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Doc1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1254.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1255.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1264.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1265.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1266.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1276.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1282.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1287.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1294.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1296.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1376.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1383.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1385.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1387.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1390.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1409.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1443.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../221_quantized/Parcels_221_quantized_1489.0.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/Projet_ter.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/Projet_ter.tlog/unsuccessfulbuild" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Debug/vc142.idb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Occurrence_pattern_example.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Occurrence_pattern_example_v1.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Occurrence_pattern_example_v2.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pattern.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Pattern.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projet_ter.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projet_ter.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projet_ter.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Source.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hist_example.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../motif_example.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/Projet_ter.tlog/CL.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/Projet_ter.tlog/CL.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/Projet_ter.tlog/CL.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/Projet_ter.tlog/Projet_ter.lastbuildstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/Projet_ter.tlog/link.command.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/Projet_ter.tlog/link.read.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/Projet_ter.tlog/link.write.1.tlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../x64/Debug/vc142.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,21 +71,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1585143356750">
+    <state width="1899" height="738" key="GridCell.Tab.0.bottom" timestamp="1585147424091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585143356750" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1585143356750">
+    <state width="1899" height="738" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585147424091" />
+    <state width="1899" height="738" key="GridCell.Tab.0.center" timestamp="1585147424091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585143356750" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1585143356750">
+    <state width="1899" height="738" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585147424091" />
+    <state width="1899" height="738" key="GridCell.Tab.0.left" timestamp="1585147424091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585143356750" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1585143356750">
+    <state width="1899" height="738" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585147424091" />
+    <state width="1899" height="738" key="GridCell.Tab.0.right" timestamp="1585147424091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585143356750" />
+    <state width="1899" height="738" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585147424091" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585147360808">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585147360808" />
   </component>
 </project>

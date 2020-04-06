@@ -309,3 +309,25 @@ void Pattern::writing_and_deleting_solid_patterns_220_221() {
 	}
 	MyExcelFile.close();
 }
+
+
+
+void Pattern::Set_LogRank_LogCounter() {
+	int rank = 1;
+	for (int i = 1; i < Pattern::counter_pattern_imgs.size(); i++) {
+		Pattern::LogRank.push_back(log10(rank));
+		Pattern::LogCounter.push_back(log10(Pattern::counter_pattern_imgs[i].first.first));
+		rank = rank + 1;
+	}
+}
+	
+vector<float> Pattern::Get_LogRank() {
+	return Pattern::LogRank;
+}
+vector<float> Pattern::Get_LogCounter() {
+	return Pattern::LogCounter;
+}
+
+int Pattern::Get_Classe() {
+	return stoi(Pattern::folder_nb)-220;
+}

@@ -21,6 +21,12 @@ class Pattern {
 			counter_pattern_imgs.push_back(make_pair(make_pair(1, vec), vec2));
 			//Init vector 2 
 			counter_pattern_class.push_back(make_pair(make_pair(1, vec), "0"));
+			if (folder_nb[2] == 0) {
+				classe = 0;
+			}
+			if (folder_nb[2] == 1) {
+				classe = 1;
+			}
 		};
 		//Get list of all imgs in folder
 		void load_imgs();
@@ -40,7 +46,12 @@ class Pattern {
 		void cube_220_221(string nb_f1, string nb_f2);
 		//Writing LogRank,LogCounter,Rank,Counter,Pattern,and type of orchard in csv file named data.csv
 		void writing_and_deleting_solid_patterns_220_221();
-		
+
+		//Set LogRank and LogCounter
+		void Set_LogRank_LogCounter();
+		vector<float> Get_LogRank();
+		vector<float> Get_LogCounter();
+		int Get_Classe();
 	private:
 		int cube_size=3;
 		int img_nb=3;
@@ -49,4 +60,7 @@ class Pattern {
 		vector<string> liste_img;////veteur des noms des images dans le dossier
 		vector<pair<pair<int, vector<int>>, vector<vector<int>>>> counter_pattern_imgs;
 		vector<pair<pair<int, vector<int>>, string >> counter_pattern_class;
+		vector<float> LogRank;
+		vector <float> LogCounter;
+		int classe;
 };

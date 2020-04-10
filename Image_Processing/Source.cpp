@@ -71,11 +71,17 @@ int main()
 	vector<float>s2s;
 	vector<float>nb_patterns;
 	vector<int> classes;
-	vector<string> folders_220_221 = { "220","221" };
-	vector<string> folders_220 = { "1176","1185","1188","1189","1193","1197","1198","1201","1203","1204","1320","1340" };
-	vector<string> folders_221 = { "1254","1255","1264","1265","1266","1276","1282","1287","1294","1296","1376","1383","1385","1387","1390","1409","1443","1489" };
 	Pattern pattern;
 	float count_per = 0;
+
+
+	vector<string> folders_220_221 = { "220","221" };
+	vector<string> folders_220;
+	vector<string> folders_221;
+	string path = "C:/Users/lilia/github/Projet_ter/Parcels/220_quantized/";
+	for (const auto& entry : fs::directory_iterator(path)) { folders_220.push_back(entry.path().string().substr(entry.path().string().length() - 6, 4)); }
+	string path_ = "C:/Users/lilia/github/Projet_ter/Parcels/221_quantized/";
+	for (const auto& entry : fs::directory_iterator(path_)) { folders_221.push_back(entry.path().string().substr(entry.path().string().length() - 6, 4));}
 
 	//Loop through all parcels (Intensive and Traditional)
 	for (int i = 0; i < folders_220_221.size(); i++) {
@@ -102,7 +108,7 @@ int main()
 
 
 				count_per = count_per + 1;
-				cout << "Progression : " << (count_per / 30) * 100 << "%" << endl;
+				cout << "Progression : " << (count_per / 150) * 100 << "%" << endl;
 			}
 		}
 		if (folders_220_221[i] == "221") {
@@ -128,7 +134,7 @@ int main()
 
 
 				count_per = count_per + 1;
-				cout << "Progression : " << (count_per / 30) * 100 << "%" << endl;
+				cout << "Progression : " << (count_per / 150) * 100 << "%" << endl;
 
 			}
 		}
@@ -138,8 +144,8 @@ int main()
 
 
 	//All parcels
-	//Pattern pt1;
-	//pt1.load_imgs_and_cubes_220_221();
+	Pattern pt1;
+	pt1.load_imgs_and_cubes_220_221();
 
 	return 0;
 }

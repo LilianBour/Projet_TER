@@ -186,7 +186,7 @@ void Pattern::cube_220_221(string nb_f1, string nb_f2) {
 
 					for (int i = 0; i < counter_pattern_class.size(); i++) {
 						//If pattern in patterns and from the same class (Intensive or Traditional) add +1 to counter 
-						if (counter_pattern_class[i].first.second == cube and counter_pattern_class[i].second == nb_f1) {
+						if (counter_pattern_class[i].first.second == cube) {//CLASS ADD and counter_pattern_class[i].second == nb_f1
 							counter_pattern_class[i].first.first = counter_pattern_class[i].first.first + 1;
 							boolean = false;
 							break;
@@ -198,7 +198,7 @@ void Pattern::cube_220_221(string nb_f1, string nb_f2) {
 					}
 					//if true add pair (1,pattern),and Class 
 					if (boolean == true) {
-						counter_pattern_class.push_back(make_pair(make_pair(1, cube), nb_f1));
+						counter_pattern_class.push_back(make_pair(make_pair(1, cube), "2"));//CLASS nb_f1 instead of 2
 					}
 				}
 			}
@@ -207,8 +207,13 @@ void Pattern::cube_220_221(string nb_f1, string nb_f2) {
 
 void Pattern::load_imgs_and_cubes_220_221() {
 	vector<string> folders_220_221 = { "220","221" };
-	vector<string> folders_220 = { "1176","1185","1188","1189","1193","1197","1198","1201","1203","1204","1320","1340" };
-	vector<string> folders_221 = { "1254","1255","1264","1265","1266","1276","1282","1287","1294","1296","1376","1383","1385","1387","1390","1409","1443","1489" };
+	vector<string> folders_220;
+	vector<string> folders_221;
+	string path = "C:/Users/lilia/github/Projet_ter/Parcels/220_quantized/";
+	for (const auto& entry : fs::directory_iterator(path)) { folders_220.push_back(entry.path().string().substr(entry.path().string().length() - 6, 4)); }
+	string path_ = "C:/Users/lilia/github/Projet_ter/Parcels/221_quantized/";
+	for (const auto& entry : fs::directory_iterator(path_)) { folders_221.push_back(entry.path().string().substr(entry.path().string().length() - 6, 4)); }
+
 	Pattern pattern;
 	float count_per = 0;
 
@@ -248,7 +253,7 @@ void Pattern::writing_and_deleting_solid_patterns_220_221() {
 	vector<pair<pair<int, vector<int>>, vector<vector<int>>>> cou_pat_imgs_bis;
 	//Writting on csv file + Printing infos 
 	ofstream MyExcelFile; // ";" -> new cell // endl -> new row
-	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/data.csv");
+	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/data_0+1.csv");
 	MyExcelFile << "LogR;LogC;Rank;Counter;Pattern;Class" << endl;
 	for (int j = 0; j < counter_pattern_class.size(); j++) {
 		bool to_skip = false;
@@ -302,7 +307,8 @@ void Pattern::writing_and_deleting_solid_patterns_220_221() {
 					MyExcelFile << counter_pattern_class[j].first.second[i] << ",";
 				}
 				MyExcelFile << ";";
-				MyExcelFile << counter_pattern_class[j].second[2];
+				MyExcelFile << "2";
+				//MyExcelFile << counter_pattern_class[j].second[2]; CLASS
 				MyExcelFile << endl;
 			}
 		}

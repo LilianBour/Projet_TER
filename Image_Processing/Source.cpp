@@ -65,7 +65,7 @@ int main()
 	s.Find_slope();
 	*/
 
-	
+	/*
 	//All Parcels slopes
 	vector<float> s1s;
 	vector<float>s2s;
@@ -141,11 +141,12 @@ int main()
 
 	}
 	write_slope_csv(s1s, s2s, nb_patterns, classes);
-
+	*/
 
 	//All parcels
 	Pattern pt1;
 	pt1.load_imgs_and_cubes_220_221();
+
 
 	return 0;
 }

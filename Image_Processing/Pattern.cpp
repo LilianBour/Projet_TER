@@ -186,7 +186,7 @@ void Pattern::cube_220_221(string nb_f1, string nb_f2) {
 
 					for (int i = 0; i < counter_pattern_class.size(); i++) {
 						//If pattern in patterns and from the same class (Intensive or Traditional) add +1 to counter 
-						if (counter_pattern_class[i].first.second == cube) {//CLASS ADD and counter_pattern_class[i].second == nb_f1
+						if (counter_pattern_class[i].first.second == cube and counter_pattern_class[i].second == nb_f1) {//CLASS ADD and counter_pattern_class[i].second == nb_f1
 							counter_pattern_class[i].first.first = counter_pattern_class[i].first.first + 1;
 							boolean = false;
 							break;
@@ -198,7 +198,7 @@ void Pattern::cube_220_221(string nb_f1, string nb_f2) {
 					}
 					//if true add pair (1,pattern),and Class 
 					if (boolean == true) {
-						counter_pattern_class.push_back(make_pair(make_pair(1, cube), "2"));//CLASS nb_f1 instead of 2
+						counter_pattern_class.push_back(make_pair(make_pair(1, cube), nb_f1));//CLASS nb_f1 instead of 2
 					}
 				}
 			}
@@ -217,19 +217,56 @@ void Pattern::load_imgs_and_cubes_220_221() {
 	Pattern pattern;
 	float count_per = 0;
 
+	//Writting on csv file imgs for histo and test kmeans 
+	ofstream MyExcelFile1; 
+	ofstream MyExcelFile2;
+	MyExcelFile1.open("C:/Users/lilia/github/Projet_ter/data_histo_comparison.csv");
+	MyExcelFile2.open("C:/Users/lilia/github/Projet_ter/data_kmeans_test.csv");
+
+
 	//Loop through all parcels (Intensive and Traditional)
 	for (int i = 0; i < folders_220_221.size(); i++) {
 		if (folders_220_221[i] == "220") {
 			for (int j = 0; j < folders_220.size(); j++) {
-				cout << folders_220_221[i] << " " << folders_220[j]  << " ";
-				//Add patterns for this parcels
-				pattern.cube_220_221(folders_220_221[i], folders_220[j]);
-				count_per = count_per + 1;
-				cout <<"Progression : "<< (count_per / 30) * 100 << "%" << endl;
+				if (j < folders_220.size() - 24) {
+					cout << folders_220_221[i] << " " << folders_220[j] << " " << endl;
+					//Add patterns for this parcels
+					pattern.cube_220_221(folders_220_221[i], folders_220[j]);
+					
+				}
+				if (j > folders_220.size() - 24 and j < folders_220.size() - 12) {
+					cout << folders_220_221[i] << " " << folders_220[j] << " " << endl;
+					//Write in csv comapr_histo
+					MyExcelFile1 <<folders_220_221[i] << ";" << folders_220[j] << endl;
+
+				}
+				if (j < folders_220.size() - 12) {
+					cout << folders_220_221[i] << " " << folders_220[j] << " " << endl;
+					//Write in csv test
+					MyExcelFile2 << folders_220_221[i] << ";" << folders_220[j] << endl;
+				}
 			}
 		}
 		if (folders_220_221[i] == "221") {
 			for (int j = 0; j < folders_221.size(); j++) {
+				if (j < folders_221.size() - 52) {
+					cout << folders_220_221[i] << " " << folders_221[j] << " " << endl;
+					//Add patterns for this parcels
+					pattern.cube_220_221(folders_220_221[i], folders_221[j]);
+
+				}
+				if (j > folders_221.size() - 52 and j < folders_221.size() - 26) {
+					cout << folders_220_221[i] << " " << folders_221[j] << " " << endl;
+					//Write in csv comapr_histo
+					MyExcelFile1 << folders_220_221[i] << ";" << folders_221[j] << endl;
+				}
+				if (j < folders_221.size() - 26) {
+					cout << folders_220_221[i] << " " << folders_221[j] << " " << endl;
+					//Write in csv test
+					MyExcelFile2 << folders_220_221[i] << ";" << folders_221[j] << endl;
+				}
+
+
 				cout << folders_220_221[i] << " " << folders_221[j] << " ";
 				//Add patterns for this parcels
 				pattern.cube_220_221(folders_220_221[i], folders_221[j]);
@@ -239,6 +276,10 @@ void Pattern::load_imgs_and_cubes_220_221() {
 			}
 		}
 	}
+
+	MyExcelFile1.close();
+	MyExcelFile2.close();
+
 	//Delete initializer, sort and reverse vector 
 	pattern.counter_pattern_class.erase(pattern.counter_pattern_class.begin());
 	sort(pattern.counter_pattern_class.begin(), pattern.counter_pattern_class.end());
@@ -253,7 +294,7 @@ void Pattern::writing_and_deleting_solid_patterns_220_221() {
 	vector<pair<pair<int, vector<int>>, vector<vector<int>>>> cou_pat_imgs_bis;
 	//Writting on csv file + Printing infos 
 	ofstream MyExcelFile; // ";" -> new cell // endl -> new row
-	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/data_0+1.csv");
+	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/data_0_1.csv");
 	MyExcelFile << "LogR;LogC;Rank;Counter;Pattern;Class" << endl;
 	for (int j = 0; j < counter_pattern_class.size(); j++) {
 		bool to_skip = false;
@@ -307,8 +348,8 @@ void Pattern::writing_and_deleting_solid_patterns_220_221() {
 					MyExcelFile << counter_pattern_class[j].first.second[i] << ",";
 				}
 				MyExcelFile << ";";
-				MyExcelFile << "2";
-				//MyExcelFile << counter_pattern_class[j].second[2]; CLASS
+				//MyExcelFile << "2";
+				MyExcelFile << counter_pattern_class[j].second[2]; //CLASS
 				MyExcelFile << endl;
 			}
 		}

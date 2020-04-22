@@ -85,7 +85,7 @@ void Pattern::writing_and_deleting_solid_patterns() {
 	//Writting on csv file + Printing infos 
 	ofstream MyExcelFile; // ";" -> new cell // endl -> new row
 	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/Parcels_" + folder_nb + "_quantized_" + name + ".0.csv");//MODIFY HERE
-	MyExcelFile << "LogR;LogC;Rank;Counter;Images" << endl;
+	MyExcelFile << "LogR;LogC;Rank;Counter;pattern;Images" << endl;
 	cout << "\nDone2.\n";
 	for (int j = 0; j < counter_pattern_imgs.size(); j++) {
 		bool to_skip = false;
@@ -136,6 +136,10 @@ void Pattern::writing_and_deleting_solid_patterns() {
 				MyExcelFile << rank << ";";
 				MyExcelFile << counter_pattern_imgs[j].first.first << ";";
 				rank = rank + 1;
+				for (int i = 0; i < counter_pattern_imgs[j].first.second.size(); i++) {
+					MyExcelFile << counter_pattern_imgs[j].first.second[i] << ",";
+				}
+				MyExcelFile << ";";
 				for (int i = 0; i < counter_pattern_imgs[j].second.size(); i++) {
 					for (int k = 0; k < counter_pattern_imgs[j].second[i].size(); k++) {
 						MyExcelFile << counter_pattern_imgs[j].second[i][k] << ",";
@@ -186,7 +190,7 @@ void Pattern::cube_220_221(string nb_f1, string nb_f2) {
 
 					for (int i = 0; i < counter_pattern_class.size(); i++) {
 						//If pattern in patterns and from the same class (Intensive or Traditional) add +1 to counter 
-						if (counter_pattern_class[i].first.second == cube and counter_pattern_class[i].second == nb_f1) {//CLASS ADD and counter_pattern_class[i].second == nb_f1
+						if (counter_pattern_class[i].first.second == cube) {//CLASS ADD and counter_pattern_class[i].second == nb_f1
 							counter_pattern_class[i].first.first = counter_pattern_class[i].first.first + 1;
 							boolean = false;
 							break;
@@ -198,7 +202,7 @@ void Pattern::cube_220_221(string nb_f1, string nb_f2) {
 					}
 					//if true add pair (1,pattern),and Class 
 					if (boolean == true) {
-						counter_pattern_class.push_back(make_pair(make_pair(1, cube), nb_f1));//CLASS nb_f1 instead of 2
+						counter_pattern_class.push_back(make_pair(make_pair(1, cube), "2"));//CLASS nb_f1 instead of 2
 					}
 				}
 			}
@@ -229,19 +233,19 @@ void Pattern::load_imgs_and_cubes_220_221() {
 		if (folders_220_221[i] == "220") {
 			for (int j = 0; j < folders_220.size(); j++) {
 				if (j < folders_220.size() - 24) {
-					cout << folders_220_221[i] << " " << folders_220[j] << " " << endl;
+					cout << "1 "<<folders_220_221[i] << " " << folders_220[j] << " " << endl;
 					//Add patterns for this parcels
 					pattern.cube_220_221(folders_220_221[i], folders_220[j]);
 					
 				}
 				if (j > folders_220.size() - 24 and j < folders_220.size() - 12) {
-					cout << folders_220_221[i] << " " << folders_220[j] << " " << endl;
+					cout << "2 " << folders_220_221[i] << " " << folders_220[j] << " " << endl;
 					//Write in csv comapr_histo
 					MyExcelFile1 <<folders_220_221[i] << ";" << folders_220[j] << endl;
 
 				}
-				if (j < folders_220.size() - 12) {
-					cout << folders_220_221[i] << " " << folders_220[j] << " " << endl;
+				if (j > folders_220.size() - 12) {
+					cout << "3 " << folders_220_221[i] << " " << folders_220[j] << " " << endl;
 					//Write in csv test
 					MyExcelFile2 << folders_220_221[i] << ";" << folders_220[j] << endl;
 				}
@@ -254,25 +258,18 @@ void Pattern::load_imgs_and_cubes_220_221() {
 					//Add patterns for this parcels
 					pattern.cube_220_221(folders_220_221[i], folders_221[j]);
 
+
 				}
 				if (j > folders_221.size() - 52 and j < folders_221.size() - 26) {
 					cout << folders_220_221[i] << " " << folders_221[j] << " " << endl;
 					//Write in csv comapr_histo
 					MyExcelFile1 << folders_220_221[i] << ";" << folders_221[j] << endl;
 				}
-				if (j < folders_221.size() - 26) {
+				if (j > folders_221.size() - 26) {
 					cout << folders_220_221[i] << " " << folders_221[j] << " " << endl;
 					//Write in csv test
 					MyExcelFile2 << folders_220_221[i] << ";" << folders_221[j] << endl;
 				}
-
-
-				cout << folders_220_221[i] << " " << folders_221[j] << " ";
-				//Add patterns for this parcels
-				pattern.cube_220_221(folders_220_221[i], folders_221[j]);
-				count_per = count_per + 1;
-				cout << "Progression : " << (count_per / 30) * 100 << "%" << endl;
-
 			}
 		}
 	}
@@ -348,8 +345,8 @@ void Pattern::writing_and_deleting_solid_patterns_220_221() {
 					MyExcelFile << counter_pattern_class[j].first.second[i] << ",";
 				}
 				MyExcelFile << ";";
-				//MyExcelFile << "2";
-				MyExcelFile << counter_pattern_class[j].second[2]; //CLASS
+				MyExcelFile << "2";
+				//MyExcelFile << counter_pattern_class[j].second[2]; //CLASS
 				MyExcelFile << endl;
 			}
 		}

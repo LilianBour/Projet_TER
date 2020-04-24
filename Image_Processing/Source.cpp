@@ -74,7 +74,6 @@ int main()
 	Pattern pattern;
 	float count_per = 0;
 	
-
 	vector<string> folders_220_221 = { "220","221" };
 	vector<string> folders_220;
 	vector<string> folders_221;
@@ -142,20 +141,17 @@ int main()
 	}
 	write_slope_csv(s1s, s2s, nb_patterns, classes);
 	*/
+
+
 	/*
 	//All parcels
 	Pattern pt1;
 	pt1.load_imgs_and_cubes_220_221();
 	*/
-	//All Parcels slopes
-	vector<float> s1s;
-	vector<float>s2s;
-	vector<float>nb_patterns;
-	vector<int> classes;
-	Pattern pattern;
-	float count_per = 0;
 
 
+	//Kmeans Histo_comparison data and Classification data
+	//Data will be in main folder, nedd to move data into coresponding folder (hist_comparison_data or classification_data)
 	vector<string> folders_220_221 = { "220","221" };
 	vector<string> folders_220;
 	vector<string> folders_221;
@@ -168,7 +164,7 @@ int main()
 	for (int i = 0; i < folders_220_221.size(); i++) {
 		if (folders_220_221[i] == "220") {
 			for (int j = 0; j < folders_220.size(); j++) {
-				if (j > folders_220.size() - 24 and j < folders_220.size() - 12) {
+				if (j > folders_220.size() - 12) {//CHANGE HERE to match load_imgs_and_cubes_220_221 
 					cout << folders_220_221[i] << " " << folders_220[j] << " ";
 					Pattern pt(folders_220_221[i], folders_220[j]);
 					pt.load_imgs();
@@ -181,7 +177,7 @@ int main()
 		}
 		if (folders_220_221[i] == "221") {
 			for (int j = 0; j < folders_221.size(); j++) {
-				if (j > folders_221.size() - 52 and j < folders_221.size() - 26) {
+				if (j > folders_221.size() - 26) {//CHANGE HERE to match load_imgs_and_cubes_220_221 
 					cout << folders_220_221[i] << " " << folders_221[j] << " " << endl;
 					Pattern pt(folders_220_221[i], folders_221[j]);
 					pt.load_imgs();
@@ -193,7 +189,6 @@ int main()
 		}
 
 	}
-	write_slope_csv(s1s, s2s, nb_patterns, classes);
 	return 0;
 }
 

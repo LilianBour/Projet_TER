@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f0cb78-a6d2-40a1-9560-a1639d7bf90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Image_Processing/Pattern.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/Pattern.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Image_Processing/Source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/Source.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.read.1.tlog" afterDir="false" />
@@ -10,20 +9,9 @@
       <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/link.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/vc142.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Histo_all_patterns.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kmeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kmeans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kmeans_graph.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Regression_220_and_211_copy.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hist_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kmeans_clusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/kmeans_clusters.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kmeans_clusters.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/kmeans_clusters.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_0+1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_slopes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../data_slopes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data_slopes_analysis.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../data_slopes_analysis.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_kemans1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_kmeans.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Screenshoots/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Screenshoots/2.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +39,28 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.hist_comparison">
+  <component name="RunManager" selected="Python.Classification_parcels">
+    <configuration name="Classification_parcels" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Kmeans_LogisticRegression" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Classification_parcels.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Kmeans" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Kmeans_LogisticRegression" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,6 +126,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Classification_parcels" />
         <item itemvalue="Python.hist_comparison" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.Kmeans" />
@@ -137,29 +147,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="188" key="GridCell.Tab.0.bottom" timestamp="1587565830885">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1587743780850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="188" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587565830885" />
-    <state width="1899" height="188" key="GridCell.Tab.0.center" timestamp="1587565830885">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
+    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1587743780850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="188" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587565830885" />
-    <state width="1899" height="188" key="GridCell.Tab.0.left" timestamp="1587565830885">
+    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
+    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1587743780850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="188" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587565830885" />
-    <state width="1899" height="188" key="GridCell.Tab.0.right" timestamp="1587565830885">
+    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1587743780850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="188" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587565830885" />
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587566002277">
+    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587731540185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587566002277" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587731540185" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586870706376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586870706376" />
+    <state x="-1783" y="-9" width="1441" height="761" key="dock-window-1" timestamp="1587741375490">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1783" y="-9" width="1441" height="761" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587741375490" />
   </component>
 </project>

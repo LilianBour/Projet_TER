@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f0cb78-a6d2-40a1-9560-a1639d7bf90c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Image_Processing/Source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/Source.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/Projet_ter.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Image_Processing/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../Image_Processing/x64/Debug/vc142.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hist_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Screenshoots/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Screenshoots/2.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,8 +118,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Classification_parcels" />
-        <item itemvalue="Python.hist_comparison" />
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.hist_comparison" />
         <item itemvalue="Python.Kmeans" />
       </list>
     </recent_temporary>
@@ -147,22 +138,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1587743780850">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1587837767025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
-    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1587743780850">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587837767025" />
+    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1587837767025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
-    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1587743780850">
+    <state width="1899" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587837767025" />
+    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1587837767025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
-    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1587743780850">
+    <state width="1899" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587837767025" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1587837767025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587743780850" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587837767025" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587731540185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -171,9 +162,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586870706376" />
-    <state x="-1783" y="-9" width="1441" height="761" key="dock-window-1" timestamp="1587741375490">
+    <state x="-1783" y="-9" width="1441" height="761" key="dock-window-1" timestamp="1587836324865">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1783" y="-9" width="1441" height="761" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587741375490" />
+    <state x="-1783" y="-9" width="1441" height="761" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587836324865" />
   </component>
 </project>

@@ -29,7 +29,7 @@ plt.scatter(data["p1"],data["p2"],c=data["classe"])
 plt.show()
 
 #Modify data to test with differents features
-#data=data.drop(['p1','p2'],axis=1)
+data=data.drop(['p1','p2'],axis=1)
 
 #Class repartition
 sns.set_style('darkgrid')

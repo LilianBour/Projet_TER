@@ -1,10 +1,10 @@
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, recall_score, confusion_matrix
 import math
 from imblearn.under_sampling import NearMiss
 from sklearn.neighbors import KNeighborsClassifier
+from imblearn.over_sampling import SMOTE
 import matplotlib.pyplot as plt
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
@@ -133,17 +133,14 @@ y_train=train_data.loc[:, train_data.columns == 'classe']
 X_test=test_df.loc[:, test_df.columns != 'classe']
 y_test=test_df['classe']
 
-#Bad Result without balanced data
-#[[ 0 11]
-#[ 1 24]]
 
 #Balancing data
 nm1 = NearMiss(version=1)
-X_train, y_train = nm1.fit_resample(X_train, y_train)
-#Result with nearmiss
-#[[ 9  2]
-# [13 12]]
-#Try to balance data before doing Hist, if results are still bad, try to balance data before Kmeans
+sm = SMOTE(sampling_strategy='auto', random_state=42)
+#X_train, y_train = nm1.fit_resample(X_train, y_train)
+#X_test, y_test = nm1.fit_resample(X_test, y_test)
+X_train, y_train = sm.fit_resample(X_train, y_train)
+X_test, y_test = sm.fit_resample(X_test, y_test)
 
 
 #Logistic Regression
@@ -158,7 +155,7 @@ print_report(y_test,L_pred)
 #K_neighbors (k=sqrt(n))
 knn = KNeighborsClassifier(n_neighbors = int(math.sqrt(len(X_test+X_train))))
 knn.fit(X_train,y_train.values.ravel())
-K_pred=logmod.predict(X_test)
+K_pred=knn.predict(X_test)
 print("K_neighbors : ")
 print_report(y_test,K_pred)
 #Plot K neihbors

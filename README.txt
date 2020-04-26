@@ -7,7 +7,7 @@ Folders description :
 	  C++ code to exctract 3*3px on 3 dates pattern and count them
 	  And create data to analyse 2 slopes and nb_pattern
 	- Kmeans_LogisticRegression
-	  Python scripts to classify with SVM and Logistic regression (Main.py), apply Kmeans (Kmeans.py), to compare histograms (hist_comparison.py) and .....
+	  Python scripts to classify with SVM and Logistic regression (Main.py), apply Kmeans (Kmeans.py), to compare histograms (hist_comparison.py) and to classify orchards (Classification_parcels.py)
 	- Parcels contains all images of the parcels (Intensive orchard and Traditional orchard)
 	- data is a dataframe containing data of all parcels 
 	- data_0_1 : pattern to use for Kmeans
@@ -26,10 +26,11 @@ Results can be found in data_slopes_analysis
 
 Part 2 : Kmeans and Classification
 1) Generate data_0_1, data_histo_comparison and data_kmeans_test with the code in Image_Processing
-2) Use Kmeans algorithm in Kmeans_LogisticRegression
-3) Open kmeans_clusters.csv inside Kmeans_LogisticRegression and save as .xlxs 
-3) Use hist_comparison to generate graph in hist_comparison_fig inside Kmeans_LogisticRegression
-4) .....
+2) Generate csv for parcels in data_histo_comparison and data_kmeans_test, convert them to xlxs format and move them into Projet_ter\Kmeans_LogisticRegression\classification_data and Projet_ter\Kmeans_LogisticRegression\hist_comparison_data
+3) Use Kmeans algorithm in Kmeans_LogisticRegression
+4) Open kmeans_clusters.csv inside Kmeans_LogisticRegression and save as .xlxs 
+5) Use hist_comparison to generate graph in hist_comparison_fig inside Kmeans_LogisticRegression
+6) Use Classification_parcels.py to classify and print results 
 
 
 - Copy the Parcels forlders inside Projet_ter/

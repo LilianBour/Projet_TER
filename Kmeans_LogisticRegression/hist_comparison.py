@@ -6,7 +6,7 @@ pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
 #Import cluster centers
-cluster=pd.read_excel('kmeans_clusters.xlsx')
+cluster=pd.read_excel('kmeans_clusters_100.xlsx')
 k=len(cluster.columns)
 clusters_k= [[] for i in range(k)]
 clusters_names=[]
@@ -14,7 +14,6 @@ for i in range(len(cluster.columns)):
     clusters_names.append(int(cluster.columns[i].replace('C','')))
 for j in range(k):
     clusters_k[j] = cluster[cluster.columns[j]].values
-
 
 #Hist_comparison
 numbers_1=['220','221']
@@ -67,10 +66,9 @@ for number_1 in numbers_1:
                 patterns_attribution[distance_clusters.index(min(distance_clusters))]=patterns_attribution[distance_clusters.index(min(distance_clusters))]+1
 
             # Normalize data
-            mini = min(patterns_attribution)
-            maxi = max(patterns_attribution)
+            sum_ = sum(patterns_attribution,patterns_attribution[0])
             for i in range(len(patterns_attribution)):
-                patterns_attribution[i] = (patterns_attribution[i] - mini) / (maxi - mini)
+                patterns_attribution[i] = (patterns_attribution[i] / sum_)
 
             #Write on csv
             for i in patterns_attribution:
@@ -124,13 +122,11 @@ for number_1 in numbers_1:
                 patterns_attribution[distance_clusters.index(min(distance_clusters))] = patterns_attribution[distance_clusters.index(min(distance_clusters))] + 1
 
             # Normalize data
-            mini = min(patterns_attribution)
-            maxi = max(patterns_attribution)
+            sum_ = sum(patterns_attribution,patterns_attribution[0])
             for i in range(len(patterns_attribution)):
-                patterns_attribution[i] = (patterns_attribution[i] - mini) / (maxi - mini)
+                patterns_attribution[i] = (patterns_attribution[i] / sum_)
 
             #Write on csv
-            # Write on csv
             for i in patterns_attribution:
                 f.write(str(i))
                 f.write(";")
@@ -139,7 +135,6 @@ for number_1 in numbers_1:
 
             #Plot barplot for attribution in clusters and save it
             fig1, ax1 = plt.subplots()
-            #ax1.hist(patterns_attribution,clusters_names[0:40], color='g', edgecolor='k',density=True)
             ax1.bar(clusters_names, patterns_attribution, color='g', edgecolor='k')
             ax1.set_ylim([0, 1.1])
             plt.title(number_1 + '_' + number_2_1)

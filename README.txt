@@ -14,8 +14,8 @@ Folders description :
 	- data_histo_comparison : list of parcels to use for graph comparison
 	- data_kmeans_test : list of parcels to use for classification  
 	- data_slopes contains two slopes and the number of pattern for each parcel
-	- data_slopes_analysis is the results of data_slopes classification
-	- Regression_220_and_221 is a compilation of all regression line data of all parcels and some statistics
+	- Analysis is the results of data_slopes classification and bar plot classification
+	- Analysis_Regression_220_and_221 is a compilation of all regression line data of all parcels and some statistics
 
 
 Part 1 : Slopes analysis

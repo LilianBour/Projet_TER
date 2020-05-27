@@ -73,7 +73,7 @@ while verif == False :
     #Check if new values and old values are the same
     for i in range(len(old_clusters_k)):
         for j in range(len(old_clusters_k[i])):
-            if (abs(old_clusters_k[i][j] - clusters_k[i][j]) < 0.001):
+            if (abs(old_clusters_k[i][j] - clusters_k[i][j]) < 0.1):
                 verif = True
             else:
                 verif = False

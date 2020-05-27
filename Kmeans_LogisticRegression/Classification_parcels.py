@@ -5,7 +5,6 @@ import math
 from imblearn.under_sampling import NearMiss
 from sklearn.neighbors import KNeighborsClassifier
 from imblearn.over_sampling import SMOTE
-import matplotlib.pyplot as plt
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
@@ -18,7 +17,7 @@ def print_report(y_test,y_pred):
     print(confusion_matrix(y_test, y_pred))
 
 #Import normalized data
-train_data=pd.read_excel('classification_parcels_normalized_data.xlsx')
+train_data=pd.read_excel('classification_parcels_normalized_data_100.xlsx')
 print(train_data.head())
 print(train_data.info())
 
@@ -27,7 +26,7 @@ numbers_1=['220','221']
 numbers_2_0=['1316','1320','1333','1338','1339','1340','1533','1535','1537','1538','1539']
 numbers_2_1=['1387','1388','1389','1390','1391','1392','1393','1394','1395','1404','1409','1416','1417','1433','1439','1442','1443','1444','1481','1482','1487','1489','1491','1494','1525']
 #Import Cluster centers
-cluster=pd.read_excel('kmeans_clusters.xlsx')
+cluster=pd.read_excel('kmeans_clusters_100.xlsx')
 k=len(cluster.columns)
 clusters_k= [[] for i in range(k)]
 clusters_names=[]
@@ -55,25 +54,34 @@ for number_1 in numbers_1:
                 patterns.append((new_list))
             del patterns[0]
             del patterns[0]
+
+
             #Test image's patterns
             for pat in range(len(patterns)):
-                distance_clusters = []
+                distance = []
                 for cluster in clusters_k:
                     ED = 0
+                    #ID = 0
                     # Euclidean distance
                     for l in range(len(patterns[pat])):
+                        #if (max(cluster[l], patterns[pat][l])==0):
+                            #continue
+                        #ID = ID + (min(cluster[l], patterns[pat][l]) / max(cluster[l], patterns[pat][l]))
                         ED = ED + (cluster[l] - patterns[pat][l]) ** 2
                     ED = math.sqrt(ED)
                     # Stock value in distance_clusters
-                    distance_clusters.append((ED))
+                    #distance.append((ID))
+                    distance.append((ED))
+
+
+                    
                 # Get position of min in distance_clusters
                 # Append pat in clusters_component at position of min
-                patterns_attribution[distance_clusters.index(min(distance_clusters))]=patterns_attribution[distance_clusters.index(min(distance_clusters))]+1
+                patterns_attribution[distance.index(min(distance))]= patterns_attribution[distance.index(min(distance))] + 1
             # Normalize data
-            mini = min(patterns_attribution)
-            maxi = max(patterns_attribution)
+            sum_ = sum(patterns_attribution, patterns_attribution[0])
             for i in range(len(patterns_attribution)):
-                patterns_attribution[i] = (patterns_attribution[i] - mini) / (maxi - mini)
+                patterns_attribution[i] = (patterns_attribution[i] / sum_)
 
             test_data_local=[]
             for i in patterns_attribution:
@@ -97,25 +105,31 @@ for number_1 in numbers_1:
                 patterns.append((new_list))
             del patterns[0]
             del patterns[0]
+
             #Test image's patterns
             for pat in range(len(patterns)):
-                distance_clusters = []
+                distance = []
                 for cluster in clusters_k:
                     ED = 0
+                    #ID = 0
                     # Euclidean distance
                     for l in range(len(patterns[pat])):
+                        #if (max(cluster[l], patterns[pat][l])==0):
+                            #continue
+                        #ID = ID + (min(cluster[l],patterns[pat][l]) / max(cluster[l],patterns[pat][l]))
                         ED = ED + (cluster[l] - patterns[pat][l]) ** 2
                     ED = math.sqrt(ED)
                     # Stock value in distance_clusters
-                    distance_clusters.append((ED))
+                    #distance.append((ID))
+                    distance.append((ED))
+
                 # Get position of min in distance_clusters
                 # Append pat in clusters_component at position of min
-                patterns_attribution[distance_clusters.index(min(distance_clusters))] = patterns_attribution[distance_clusters.index(min(distance_clusters))] + 1
+                patterns_attribution[distance.index(min(distance))] = patterns_attribution[distance.index(min(distance))] + 1
             # Normalize data
-            mini = min(patterns_attribution)
-            maxi = max(patterns_attribution)
+            sum_ = sum(patterns_attribution, patterns_attribution[0])
             for i in range(len(patterns_attribution)):
-                patterns_attribution[i] = (patterns_attribution[i] - mini) / (maxi - mini)
+                patterns_attribution[i] = (patterns_attribution[i] / sum_)
 
             test_data_local = []
             for i in patterns_attribution:
@@ -127,21 +141,18 @@ del test_data[0]
 del test_data[0]
 clusters_names.append('classe')
 test_df = pd.DataFrame(test_data, columns=clusters_names)
+
 #Set X_train_X_test,y_train,y_test
 X_train=train_data.loc[:, train_data.columns != 'classe']
 y_train=train_data.loc[:, train_data.columns == 'classe']
 X_test=test_df.loc[:, test_df.columns != 'classe']
 y_test=test_df['classe']
 
-
 #Balancing data
 nm1 = NearMiss(version=1)
 sm = SMOTE(sampling_strategy='auto', random_state=42)
-#X_train, y_train = nm1.fit_resample(X_train, y_train)
-#X_test, y_test = nm1.fit_resample(X_test, y_test)
-X_train, y_train = sm.fit_resample(X_train, y_train)
-X_test, y_test = sm.fit_resample(X_test, y_test)
-
+X_train, y_train = nm1.fit_resample(X_train, y_train)
+#X_train, y_train = sm.fit_resample(X_train, y_train)
 
 #Logistic Regression
 print("LOGISTIC REGRESSION \n")
@@ -150,13 +161,36 @@ logmod.fit(X_train, y_train)
 L_pred=logmod.predict(X_test)
 print("Logistic Regression : ")
 print_report(y_test,L_pred)
-#Plot Logistic Reg
 
 #K_neighbors (k=sqrt(n))
 knn = KNeighborsClassifier(n_neighbors = int(math.sqrt(len(X_test+X_train))))
+#knn = KNeighborsClassifier(n_neighbors = 1)
 knn.fit(X_train,y_train.values.ravel())
 K_pred=knn.predict(X_test)
 print("K_neighbors : ")
 print_report(y_test,K_pred)
-#Plot K neihbors
+
+
+#K neighbors 2
+K2_pred = []
+for x_testing_nb in range(len(X_test)):
+    distance = []
+    for x_training_nb in range(len(X_train)):
+        #ED = 0
+        ID = 0
+        # Euclidean distance
+        for l in range(len(X_train.iloc[x_training_nb,])):
+            if (max(X_train.iloc[x_training_nb,l],X_test.iloc[x_testing_nb,l]) == 0):
+                continue
+            ID = ID + (min(X_train.iloc[x_training_nb,l],X_test.iloc[x_testing_nb,l])/max(X_train.iloc[x_training_nb,l],X_test.iloc[x_testing_nb,l]))
+            #ED = ED + (X_train.iloc[x_training_nb,l] - X_test.iloc[x_testing_nb,l]) ** 2
+        #ED = math.sqrt(ED)
+        # Stock value in distance
+        #distance.append((ED))
+        distance.append((ID))
+    # Associate classe to the same class of the min distance element
+    K2_pred.append(y_train.iloc[distance.index(min(distance)), ])
+print("K_neighbors 2 : ")
+print_report(y_test,K2_pred)
+
 

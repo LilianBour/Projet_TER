@@ -4,7 +4,51 @@
     <list default="true" id="c7f0cb78-a6d2-40a1-9560-a1639d7bf90c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classification_parcels.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classification_parcels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/Kmeans.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classification_parcels_normalized_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/classification_parcels_normalized_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classification_parcels_normalized_data.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1195.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1195.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1196.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1196.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1197.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1197.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1198.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1198.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1199.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1199.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1200.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1200.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1201.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1201.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1202.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1202.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1203.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1203.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1204.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1204.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/220_1228.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/220_1228.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1353.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1353.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1354.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1354.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1355.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1355.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1359.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1359.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1360.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1360.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1361.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1361.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1363.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1363.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1365.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1365.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1366.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1366.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1367.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1367.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1368.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1368.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1370.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1370.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1371.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1371.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1373.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1373.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1375.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1375.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1376.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1376.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1377.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1377.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1378.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1378.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1379.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1379.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1380.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1380.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1381.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1381.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1382.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1382.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1383.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1383.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1384.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1384.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hist_comparison_fig/221_1385.png" beforeDir="false" afterPath="$PROJECT_DIR$/hist_comparison_fig/221_1385.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kmeans_clusters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/kmeans_clusters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kmeans_clusters.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rapport.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Rapport.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_slopes_analysis.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../data_slopes_analysis.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,26 +184,36 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="380" key="GridCell.Tab.0.bottom" timestamp="1587919617375">
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1590403206569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="380" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587919617375" />
-    <state width="1899" height="380" key="GridCell.Tab.0.center" timestamp="1587919617375">
+    <state x="-1181" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590346345320" />
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590403206569" />
+    <state width="1899" height="258" key="GridCell.Tab.0.bottom" timestamp="1589967928049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="380" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587919617375" />
-    <state width="1899" height="380" key="GridCell.Tab.0.left" timestamp="1587919617375">
+    <state width="1899" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589237963175" />
+    <state width="1899" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589967928049" />
+    <state width="1899" height="258" key="GridCell.Tab.0.center" timestamp="1589967928049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="380" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587919617375" />
-    <state width="1899" height="380" key="GridCell.Tab.0.right" timestamp="1587919617375">
+    <state width="1899" height="372" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589237963175" />
+    <state width="1899" height="258" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589967928049" />
+    <state width="1899" height="258" key="GridCell.Tab.0.left" timestamp="1589967928049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="380" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587919617375" />
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587909698308">
+    <state width="1899" height="372" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589237963175" />
+    <state width="1899" height="258" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589967928049" />
+    <state width="1899" height="258" key="GridCell.Tab.0.right" timestamp="1589967928049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1587909698308" />
+    <state width="1899" height="372" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589237963175" />
+    <state width="1899" height="258" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1589967928049" />
+    <state x="-1265" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1590598001496">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1265" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1590598001496" />
+    <state x="-1265" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1590420670157" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586870706376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

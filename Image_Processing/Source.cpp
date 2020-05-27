@@ -65,6 +65,8 @@ int main()
 	s.Find_slope();
 	*/
 
+
+
 	/*
 	//All Parcels slopes
 	vector<float> s1s;
@@ -143,11 +145,14 @@ int main()
 	*/
 
 
+
+
 	/*
 	//All parcels
 	Pattern pt1;
 	pt1.load_imgs_and_cubes_220_221();
 	*/
+
 
 
 	//Kmeans Histo_comparison data and Classification data

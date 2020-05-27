@@ -29,9 +29,10 @@ plt.scatter(data["p1"],data["p2"],c=data["classe"])
 plt.show()
 
 #Modify data to test with differents features
-data=data.drop(['p1','p2'],axis=1)
+#data=data.drop(['p1','p2'],axis=1)
 
 #Class repartition
+#Plot
 sns.set_style('darkgrid')
 sns.countplot(x='classe', data=data, palette='RdBu_r')
 plt.show()
@@ -41,7 +42,7 @@ X = data.loc[:, data.columns != 'classe']
 y = data['classe']
 sm = SMOTE(sampling_strategy='auto', random_state=42)
 X_smote, y_smote = sm.fit_resample(X, y)
-
+#Plot
 sns.set_style('darkgrid')
 sns.countplot(x=y_smote, data=X_smote, palette='RdBu_r')
 plt.show()
@@ -49,7 +50,7 @@ plt.show()
 #Nearmiss data creation
 nm1 = NearMiss(version=1)
 X_nm, y_nm = nm1.fit_resample(X, y)
-
+#Plot
 sns.set_style('darkgrid')
 sns.countplot(x=y_nm, data=X_nm, palette='RdBu_r')
 plt.show()
@@ -80,7 +81,7 @@ nm_prediction=logmod.predict(X_test)
 print("Logistic Regression - Nearmiss Model : ")
 print_report(y_test,nm_prediction)
 
-
+#Support Vector Machine
 #Normal SVM
 print("SVM")
 X_train, X_test, y_train, y_test = train_test_split(data.loc[:, data.columns != 'classe'], data['classe'], test_size=0.30, random_state=10)
@@ -110,5 +111,5 @@ X_test=sc.transform((X_test))
 svm = SVC(kernel='linear')
 svm.fit(X_train, y_train)
 nm_prediction_svm=svm.predict(X_test)
-print("SVM - Smote Model : ")
+print("Nearmiss - Smote Model : ")
 print_report(y_test,nm_prediction_svm)

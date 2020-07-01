@@ -30,7 +30,7 @@ Pattern welcome_fun() {
 		return pt;
 	}
 	else {
-		cout << "Parcel : 221 - 1489\n";
+		cout << "Parcel : 220 - 1188\n";
 		cin.ignore();
 		Pattern pt;
 		return pt;
@@ -50,6 +50,24 @@ void write_slope_csv(vector<float> s1, vector<float>s2, vector<float>nb_pattern,
 
 int main()
 {
+
+
+	//For all traditional parcels only
+	//Get the center of all patterns from the first slope it should be the position i,j from the 4th elem of the 9
+	//Get the slopes
+	//Get the cutting point = first point of the second slope 
+
+	//Cretate a new image where +1 is added at each position i,j for x in LogCounter while x < cutting point 
+
+
+
+	//Only one parcel cube and image of sums
+	Pattern pt = welcome_fun();
+	pt.load_imgs();
+	pt.cube();
+	pt.sorting();
+	pt.writing_and_deleting_solid_patterns();
+	pt.print_cube_and_temp_sum();
 
 	/*
 	//Only one parcel
@@ -154,7 +172,7 @@ int main()
 	*/
 
 
-
+	/*
 	//Kmeans Histo_comparison data and Classification data
 	//Data will be in main folder, nedd to move data into coresponding folder (hist_comparison_data or classification_data)
 	vector<string> folders_220_221 = { "220","221" };
@@ -194,6 +212,7 @@ int main()
 		}
 
 	}
+	*/
 	return 0;
 }
 

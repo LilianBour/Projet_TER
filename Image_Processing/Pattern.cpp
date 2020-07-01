@@ -79,6 +79,47 @@ void Pattern::cube() {
 	}
 }
 
+void Pattern::print_cube_and_temp_sum() {
+	vector<int> pattern = { 124,198,255,124,198,255,124,198,255,124,198,255,124,198,255,124,198,255,124,198,255,124,198,255,124,198,255 };
+
+	vector<vector<int>> temp_sum = { {},{},{} };
+	vector<vector<int>> face_one = { {},{},{} };
+	vector<vector<int>> face_two = { {},{},{} };
+	vector<vector<int>> face_three = { {},{},{} };
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 9; j++) {
+			temp_sum[i].push_back((pattern[j] + pattern[j + 9] + pattern[j + 18]));
+			face_one[i].push_back(pattern[j]);
+			face_two[i].push_back(pattern[j+9]);
+			face_three[i].push_back(pattern[j+18]);
+		}
+	}
+
+	//New img with openCV
+	cv::Mat img(300,300, CV_8UC1, cv::Scalar(0));
+	cout << "Created" << endl;
+	for (int i = 0; i < 300; i++) {
+		int i_ = round(i / 100);
+		for (int j = 0; j < 300; j++) {
+			int j_ = round(j / 100);
+			img.at<uchar>(i, j) = temp_sum[i_][j_];
+
+		}
+	}
+	imshow("2D CUBE", img);
+
+	//print cubes 
+	for (int i = 0; i < 3; i++) {
+		cout << "[" << temp_sum[i][0] << " " << temp_sum[i][1] << " " << temp_sum[i][2] << "]   ";
+		cout << "[" << face_one[i][0] << " " << face_one[i][1] << " " << face_one[i][2] << "]   ";
+		cout << "[" << face_two[i][0] << " " << face_two[i][1] << " " << face_two[i][2] << "]   ";
+		cout << "[" << face_three[i][0] << " " << face_three[i][1] << " " << face_three[i][2] << "]   ";
+		cout << endl;
+	}
+	waitKey(0);
+
+}
+
 void Pattern::writing_and_deleting_solid_patterns() {
 	int rank = 1;
 	vector<pair<pair<int, vector<int>>, vector<vector<int>>>> cou_pat_imgs_bis;

@@ -14,7 +14,7 @@ using namespace cv;
 
 class Pattern {
 	public:
-		Pattern(string Folder_nb="221", string Name="1489") :folder_nb(Folder_nb), name(Name) {
+		Pattern(string Folder_nb="220", string Name="1188") :folder_nb(Folder_nb), name(Name) {
 			//Init vector
 			vector<int> vec = { 0,0,0,0,0 };
 			vector<vector<int>> vec2 = { {0000,0000,0000},{0000,0000,0000} };
@@ -38,6 +38,8 @@ class Pattern {
 		void cube();
 		//Writing and deleting to avoid solid patterns
 		void writing_and_deleting_solid_patterns();
+		//Function to print value of pattern and img of temporal sum
+		void print_cube_and_temp_sum();
 
 
 		//Go through all parcels, look for pattern, and create csv file

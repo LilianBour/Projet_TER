@@ -19,7 +19,7 @@ void Pattern::sorting() {
 	counter_pattern_imgs.pop_back();
 }
 
-void Pattern::cube() {
+pair<int, int> Pattern::cube() {
 	for (size_t i = 1; i < liste_img.size() - 1; i++)
 	{
 		//Taking only the date from the file name 
@@ -47,11 +47,19 @@ void Pattern::cube() {
 			for (int b = 0; b < cols - cube_size; b++) {
 				y = y + 1;
 				vector<int> cube;
+				int counter = 0;
+				int position_i;
+				int position_j;
 				for (int i = x; i < x + cube_size; i++) {
 					for (int j = y; j < y + cube_size; j++) {
+						if (counter == 4) {
+							position_i=i;
+							position_j=j;
+						}
 						cube.push_back((int)img0.at<uchar>(i, j));
 						cube.push_back((int)img1.at<uchar>(i, j));
 						cube.push_back((int)img2.at<uchar>(i, j));
+						counter = counter + 1;
 					}
 				}
 
@@ -60,7 +68,8 @@ void Pattern::cube() {
 					//If pattern in patterns add +1 to counter
 					if (counter_pattern_imgs[i].first.second == cube) {
 						counter_pattern_imgs[i].first.first = counter_pattern_imgs[i].first.first + 1;
-						counter_pattern_imgs[i].second.push_back({ date0,date1,date2 });
+						//counter_pattern_imgs[i].second.push_back({ date0,date1,date2 });
+						counter_pattern_imgs[i].second.push_back({ position_i,position_j });
 						boolean = false;
 						break;
 					}
@@ -71,12 +80,15 @@ void Pattern::cube() {
 				}
 				//if true add pair (1,pattern) 
 				if (boolean == true) {
-					vector<vector<int>> dates = { {date0,date1,date2} };
-					counter_pattern_imgs.push_back(make_pair(make_pair(1, cube), dates));
+					//vector<vector<int>> dates = { {date0,date1,date2} };
+					vector<vector<int>> positions = { {position_i,position_j} };
+					counter_pattern_imgs.push_back(make_pair(make_pair(1, cube), positions));
 				}
 			}
 		}
 	}
+	Mat img0 = imread(liste_img[0]);
+	return make_pair(img0.rows, img0.cols);
 }
 
 void Pattern::print_cube_and_temp_sum() {
@@ -127,7 +139,6 @@ void Pattern::writing_and_deleting_solid_patterns() {
 	ofstream MyExcelFile; // ";" -> new cell // endl -> new row
 	MyExcelFile.open("C:/Users/lilia/github/Projet_ter/Parcels_" + folder_nb + "_quantized_" + name + ".0.csv");//MODIFY HERE
 	MyExcelFile << "LogR;LogC;Rank;Counter;pattern;Images" << endl;
-	cout << "\nDone2.\n";
 	for (int j = 0; j < counter_pattern_imgs.size(); j++) {
 		bool to_skip = false;
 		//If pattern appearing more than 10 times add to csv file 
@@ -140,7 +151,7 @@ void Pattern::writing_and_deleting_solid_patterns() {
 			//Check if pattern is not all equal pixels 
 			for (int i = 0; i < counter_pattern_imgs[j].first.second.size(); i++) {
 				bool verification_add;
-				cout << counter_pattern_imgs[j].first.second[i] << " ";
+				//cout << counter_pattern_imgs[j].first.second[i] << " ";
 				for (int k = 0; k < verification_values.size(); k++) {
 					if (verification_values[k].second == counter_pattern_imgs[j].first.second[i]) {
 						verification_values[k].first = verification_values[k].first + 1;
@@ -166,7 +177,7 @@ void Pattern::writing_and_deleting_solid_patterns() {
 			//if not write on csv file + copy in vector bis 
 			if (to_skip == false) {
 				cou_pat_imgs_bis.push_back(counter_pattern_imgs[j]);
-				cout << "Pattern " << j << " appearing " << counter_pattern_imgs[j].first.first << " times" << endl;
+				//cout << "Pattern " << j << " appearing " << counter_pattern_imgs[j].first.first << " times" << endl;
 				//Remplace . in floats by , for excel
 				string LogR = to_string(log10(rank));
 				replace(LogR.begin(), LogR.end(), '.', ',');
@@ -371,7 +382,7 @@ void Pattern::writing_and_deleting_solid_patterns_220_221() {
 
 			//if not write on csv file
 			if (to_skip == false) {
-				cout << "Pattern " << j << " appearing " << counter_pattern_class[j].first.first << " times" << endl;
+				//cout << "Pattern " << j << " appearing " << counter_pattern_class[j].first.first << " times" << endl;
 				////Remplacement des . dans les floats par des , pour que ce soit adapté au format excel
 				string LogR = to_string(log10(rank));
 				replace(LogR.begin(), LogR.end(), '.', ',');
@@ -415,4 +426,8 @@ vector<float> Pattern::Get_LogCounter() {
 
 int Pattern::Get_Classe() {
 	return stoi(Pattern::folder_nb)-220;
+}
+
+vector<pair<pair<int, vector<int>>,vector<vector<int>>>> Pattern::Get_counter_pattern_imgs() {
+	return Pattern::counter_pattern_imgs;
 }

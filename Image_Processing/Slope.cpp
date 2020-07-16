@@ -40,7 +40,7 @@ pair<float, float> Slope::Slope_Intercept() {
 	//Slope::a = r * (Sy / Sx);
 	Slope::a = sxy / sx;
 	Slope::b = ym - a * xm;
-	cout << "y=" << Slope::a << "x+" << Slope::b << endl;
+	//cout << "y=" << Slope::a << "x+" << Slope::b << endl;
 	return make_pair(a, b);
 }
 
@@ -61,13 +61,14 @@ pair<float, int> Slope::Furthest_from_line() {
 	return dist;
 }
 
-void Slope::Find_slope() {
+float Slope::Find_slope() {
 	float seuil = 0.29;
 	if (Slope::distance.first < seuil or Slope::distance.first == seuil) {
 		Slope::s1 = Slope::a;
 		Slope::s2 = Slope::a;
 	}
 	pair<float, pair<float, float>> distance_slope1_slope2 = make_pair(1000000.0, make_pair(0.0, 0.0));
+	float cutting_point = -1.0;
 	if (Slope::distance.first > seuil) {
 		for (int i = 2; i < Slope::X.size() - 3; i++) {
 			vector<float> part1_x (i);
@@ -89,12 +90,14 @@ void Slope::Find_slope() {
 			d = d + p2.Furthest_from_line().first;
 				if (d < distance_slope1_slope2.first) {
 					distance_slope1_slope2 = make_pair(d, make_pair(s1, s2));
+					cutting_point = part2_x[0];
 			}
+	
 		}
 		Slope::s1 = distance_slope1_slope2.second.first;
 		Slope::s2 = distance_slope1_slope2.second.second;
 	}
-	
+	return cutting_point;
 }
 
 float Slope::Get_s1() {

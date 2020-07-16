@@ -53,21 +53,88 @@ int main()
 
 
 	//For all traditional parcels only
-	//Get the center of all patterns from the first slope it should be the position i,j from the 4th elem of the 9
-	//Get the slopes
-	//Get the cutting point = first point of the second slope 
+	vector<float> s1s;
+	vector<float>s2s;
+	vector<float>nb_patterns;
+	vector<int> classes;
+	Pattern pattern;
 
-	//Cretate a new image where +1 is added at each position i,j for x in LogCounter while x < cutting point 
+	vector<string> folders_220_221 = { "220","221" };
+	vector<string> folders_220;
+	string path = "C:/Users/lilia/github/Projet_ter/Parcels/220_quantized/";
+	for (const auto& entry : fs::directory_iterator(path)) { folders_220.push_back(entry.path().string().substr(entry.path().string().length() - 6, 4)); }
+	
+
+	//Loop through all parcels (Traditional)
+	for (int i = 0; i < folders_220_221.size(); i++) {
+		if (folders_220_221[i] == "220") {
+			for (int j = 0; j < folders_220.size(); j++) {
+				cout << folders_220_221[i] << " " << folders_220[j] << " ";
+				Pattern pt(folders_220_221[i], folders_220[j]);
+				pt.load_imgs();
+
+				//Get the center of all patterns from the first slope it should be the position i,j from the 4th elem of the 9 and put it in the last vector of counter_pattern_imgs (in fuction cube)
+				pair<int,int> size_image = pt.cube(); //Changed cube type from void to pair to return image size (col and row)
+				pt.sorting();
+				pt.writing_and_deleting_solid_patterns();
+				pt.Set_LogRank_LogCounter();
+
+
+				//Get the slopes and Get the cutting point = first point of the second slope 
+				Slope s(pt.Get_LogRank(), pt.Get_LogCounter(), pt.Get_Classe());
+				s.Slope_Intercept();
+				s.Furthest_from_line();
+				float cutting_point = s.Find_slope(); //Changed Find_Slope type from void to float to return the cutting point 
+
+
+				vector<pair<float, vector<vector<int>>>> LogRank_CenterPositions;
+				for (int i = 0; i < pt.Get_LogRank().size(); i++) {
+					LogRank_CenterPositions.push_back(make_pair(pt.Get_LogRank()[i], pt.Get_counter_pattern_imgs()[i].second));
+				}
+
+
+				//Create empty img
+				Mat Image_Add = Mat(size_image.first, size_image.second, CV_8UC1);
+				cout << "ROWS "<<Image_Add.rows << " COLS " << Image_Add.cols << endl;
+
+				//+1 is added at each position i,j for x in LogCounter while x < cutting point 
+				if (cutting_point == -1.0) {
+					//take all 
+					for (int i = 0; i < LogRank_CenterPositions.size(); i++) {
+						for (int j = 0; j < LogRank_CenterPositions[i].second.size(); j++) {
+							Image_Add.at<uchar>(LogRank_CenterPositions[i].second[j][0], LogRank_CenterPositions[i].second[j][1]) = +1;
+						}
+					}
+				}
+				else {
+					//take until cutting point which is a LogRank
+					for (int i = 0; i < LogRank_CenterPositions.size(); i++) {
+						if (LogRank_CenterPositions[i].first == cutting_point) {
+							break;
+						}
+						for (int j = 0; j < LogRank_CenterPositions[i].second.size(); j++) {
+							Image_Add.at<uchar>(LogRank_CenterPositions[i].second[j][0], LogRank_CenterPositions[i].second[j][1]) = +1;
+						}
+					}
+				}
+				cv::resize(Image_Add, Image_Add,cv::Size(),10, 10);
+				imshow("Image_Add", Image_Add);
+				imwrite("C:/Users/lilia/github/Projet_ter/Parcels_220_quantized_" + folders_220[j] + ".0.jpg",Image_Add);
+				//waitKey(0);
+			}
+		}
+	}
 
 
 
 	//Only one parcel cube and image of sums
-	Pattern pt = welcome_fun();
+	/*Pattern pt = welcome_fun();
 	pt.load_imgs();
 	pt.cube();
 	pt.sorting();
 	pt.writing_and_deleting_solid_patterns();
 	pt.print_cube_and_temp_sum();
+	*/
 
 	/*
 	//Only one parcel

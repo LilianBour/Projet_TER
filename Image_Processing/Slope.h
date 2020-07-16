@@ -18,7 +18,7 @@ class Slope {
 		vector<float> Get_Y();//?
 		pair<float, float> Slope_Intercept();
 		pair<float, int> Furthest_from_line();
-		void Find_slope();
+		float Find_slope();
 
 		float Get_s1();
 		float Get_s2();

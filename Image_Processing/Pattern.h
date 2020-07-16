@@ -35,7 +35,7 @@ class Pattern {
 		//Sorting and reversing counter_pattern_imgs by highest counter of pattern + Deleting last element 
 		void sorting ();
 		//Creating cube from i-1, i, i+1
-		void cube();
+		pair<int, int> cube();
 		//Writing and deleting to avoid solid patterns
 		void writing_and_deleting_solid_patterns();
 		//Function to print value of pattern and img of temporal sum
@@ -54,6 +54,8 @@ class Pattern {
 		vector<float> Get_LogRank();
 		vector<float> Get_LogCounter();
 		int Get_Classe();
+		vector<pair<pair<int, vector<int>>, vector<vector<int>>>> Get_counter_pattern_imgs();
+
 	private:
 		int cube_size=3;
 		int img_nb=3;
